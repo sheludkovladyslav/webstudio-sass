@@ -4,6 +4,6 @@
 @import "utils/mixins";
 @import "utils/variables";
 @import "components/portfolio/main";
-// footer and header same as in index.html 
-@import "components/portfolio/header";
-@import "components/portfolio/footer"
+// footer and header same as in index.html
+@import "components/index/header";
+@import "components/index/footer";
