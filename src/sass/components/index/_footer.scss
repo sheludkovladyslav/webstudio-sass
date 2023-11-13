@@ -1,0 +1,38 @@
+.footer {
+  background-color: $baseBackgroundColor;
+  display: flex;
+  height: 252px;
+  flex-direction: column;
+  min-width: 1600px;
+  justify-content: center;
+  padding-left: 10%;
+
+  &__link {
+    color: $discriptionsColor;
+    font-size: 14px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+  }
+  &__link.adress {
+    color: $subBaseColorf;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+    font-weight: 400;
+  }
+}
+
+.footer__logo {
+  width: 145px;
+  height: 31px;
+  margin-bottom: 20px;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

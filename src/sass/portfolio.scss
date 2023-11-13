@@ -1,0 +1,9 @@
+@import "default/reset";
+@import "default/default-styles";
+@import "utils/placeholders";
+@import "utils/mixins";
+@import "utils/variables";
+@import "components/portfolio/main";
+// footer and header same as in index.html 
+@import "components/portfolio/header";
+@import "components/portfolio/footer"

@@ -1,0 +1,56 @@
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  margin-left: 215px;
+  margin-right: 215px;
+}
+
+.nav__wrapper {
+  display: flex;
+  gap: 90px;
+}
+
+.nav {
+  border-bottom: 1px solid $discriptionsColor;
+  height: 80px;
+  padding-top: 1px;
+  &__buttons {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: $baseColor;
+  }
+  &__buttons--active {
+    @include animation(color);
+    &:hover {
+      color: $activeColor;
+    }
+  }
+  &__contacts {
+    display: flex;
+    gap: 50px;
+  }
+  &__categories {
+    display: flex;
+    align-items: center;
+  }
+  &__link--active:hover {
+    color: $activeColor;
+    @include animation(color);
+  }
+}
+
+.nav__contact {
+  color: $discriptionsColor;
+}
+
+.contacts {
+  font-family: "Roboto";
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.categories {
+  gap: 50px;
+}

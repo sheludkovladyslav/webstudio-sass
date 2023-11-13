@@ -1,0 +1,91 @@
+.main {
+  &__selector {
+    gap: 30px;
+    @extend %flexibility;
+  }
+  &__projects {
+    @extend %flexibility;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+.selector {
+  &__component {
+    background-color: $subBaseColor;
+    color: $baseColor;
+    text-align: center;
+    border-radius: 4px;
+  }
+  &__component--active:hover {
+    background: $activeColor;
+    color: $subBaseColor;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+    @include animation(background-color);
+  }
+}
+
+.component {
+  padding: 6px 25px;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.projects {
+  max-width: 1250px;
+  margin: 0px auto 94px auto;
+  &__card {
+    border: 1px solid #eee;
+    max-width: 370px;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  &__title {
+    color: $baseColor;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 36px; /* 200% */
+    letter-spacing: 1.08px;
+  }
+  &__overlay {
+    width: 370px;
+    height: 294px;
+    position: absolute;
+    background: rgba(33, 150, 243, 0.9);
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    @include animation(transform)
+  }
+}
+
+.category {
+  color: $discriptionsColor;
+  font-weight: 400;
+  line-height: 30px; /* 187.5% */
+  padding: 4px 0px 20px 24px;
+}
+
+.title {
+  margin-top: 20px;
+  padding: 0px 0px 0px 24px;
+}
+
+.overlay {
+  padding: 63px 24px;
+  &__paragraph {
+    color: $subBaseColor;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: 0.54px;
+  }
+}
+
+.projects__card--active:hover .overlay {
+  transform: translateY(0%);
+}
