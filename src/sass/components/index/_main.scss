@@ -1,31 +1,23 @@
 .hero {
-  display: flex;
-  justify-content: center;
+  @extend %flexibility;
   flex-direction: column;
   align-items: center;
   background-color: $baseBackgroundColor;
 
   &__title {
+    @include text($subBaseColor, 44px, 900);
     text-align: center;
-    color: $subBaseColor;
     text-transform: uppercase;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 900;
     font-size: 44px;
     line-height: 60px;
   }
   &__button {
+    @include text($subBaseColor, 16px, 700);
     background: $activeColor;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px $shadowColor;
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
+    @extend %flexibility;
     align-items: center;
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
     line-height: 30px;
     color: $subBaseColor;
     cursor: pointer;
@@ -55,31 +47,23 @@
 }
 
 .advantages {
-  display: flex;
+  @extend %flexibility;
   gap: 30px;
-  justify-content: center;
   margin-top: 94px;
   margin-bottom: 94px;
   &__title {
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 14px;
+    @include text($baseColor, 14px, 700);
     line-height: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: $baseColor;
   }
   &__item {
     width: 270px;
   }
   &__discription {
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
+    @include text($descriptionsColor, 14px, 400);
     line-height: 24px;
     letter-spacing: 0.03em;
-    color: $discriptionsColor;
   }
   &__icon {
     display: flex;
@@ -109,27 +93,20 @@
 
 .activities {
   &__title {
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+    @include text($baseColor, 36px, 700);
     text-align: center;
     letter-spacing: 0.03em;
-    color: $baseColor;
     margin-bottom: 50px;
   }
   &__list {
-    justify-content: center;
-    display: flex;
+    @extend %flexibility;
   }
   &__description {
-    color: $subBaseColor;
+    @include text($subBaseColor, 14px, 700);
     text-align: center;
-    font-size: 14px;
-    font-weight: 700;
     letter-spacing: 0.42px;
     text-transform: uppercase;
-    background: rgba(47, 48, 58, 0.8);
+    background: $mainBackground;
     width: 370px;
     height: 70px;
   }
@@ -176,17 +153,15 @@
   &__card {
     border-radius: 0px 0px 4px 4px;
     background: $subBaseColor;
-    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 2px 1px 0px $shadowSubColor,
+      0px 1px 1px 0px $shadow, 0px 1px 3px 0px $shadowSub ;
   }
 
   &__title {
     @extend %flexibility;
+    @include text($baseColor, 36px, 700);
     color: $baseColor;
     text-align: center;
-    font-size: 36px;
-    font-family: Roboto;
-    font-weight: 700;
     letter-spacing: 1.08px;
   }
 }
@@ -216,13 +191,9 @@
   }
 
   &__job {
-    color: $discriptionsColor;
+    @include text($descriptionsColor, 16px, 400);
+    color: $descriptionsColor;
     text-align: center;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     letter-spacing: 0.48px;
   }
 }
@@ -237,9 +208,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #0000003e;
+  background-color: $backdrop;
   opacity: 1;
-  @include animation(opacity)
+  @include animation(opacity);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -259,8 +230,8 @@
   transform: translate(-50%, -50%) scale(0);
   border-radius: 4px;
   background: $subBaseColor;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px 0px $shadowSubColor,
+    0px 1px 1px 0px $shadow, 0px 1px 3px 0px $shadowSub ;
   @include animation(transform);
 
   &__close {
@@ -272,9 +243,8 @@
     padding-top: 12px;
   }
   &__title {
+    @include text($baseColor, 20px, 700);
     text-align: center;
-    font-size: 20px;
-    font-weight: 700;
     letter-spacing: 0.6px;
   }
 }
@@ -299,7 +269,7 @@
     padding: 12px 16px;
     margin-bottom: 20px;
   }
-  
+
   &__textarea--active:focus-within {
     border-color: $activeColor;
   }
@@ -339,7 +309,7 @@
 .wrapper {
   display: flex;
   align-items: center;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid $borders;
   border-radius: 4px;
   @include animation(border-color);
 }
@@ -360,9 +330,7 @@
 }
 
 .label {
-  color: $discriptionsColor;
-  font-size: 12px;
-  font-weight: 400;
+  @include text($descriptionsColor, 12px, 400);
   letter-spacing: 0.12px;
   padding-bottom: 4px;
 }
@@ -373,7 +341,7 @@
   display: flex;
   height: 120px;
   border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid $borders;
   outline: none;
   @include animation(border-color);
 }
@@ -394,9 +362,7 @@
 }
 
 .accept {
-  color: $discriptionsColor;
-  font-size: 14px;
-  font-weight: 400;
+  @include text($descriptionsColor, 14px, 400);
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.42px;
 }
@@ -409,7 +375,7 @@
 .submit {
   border-radius: 4px;
   background: $activeColor;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px 0px $shadowColor;
   border: none;
   color: $subBaseColor;
   text-align: center;

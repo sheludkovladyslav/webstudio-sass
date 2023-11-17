@@ -21,18 +21,17 @@ li {
   list-style-type: none;
 }
 
-.button__wrapper, .team__title, .team__cards {
+.footer, .button__wrapper, .team__title, .team__cards, .activities__list, .advantages, .hero__button, .hero {
   display: flex;
   justify-content: center;
 }
 
 .header__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 32px;
-  margin-left: 215px;
-  margin-right: 215px;
+  max-width: 1600px;
 }
 
 .nav__wrapper {
@@ -79,33 +78,29 @@ li {
 }
 
 .hero {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: #2F303A;
 }
 .hero__title {
-  text-align: center;
   color: #FFFFFF;
-  text-transform: uppercase;
-  font-family: "Roboto";
-  font-style: normal;
+  font-family: Roboto;
+  font-size: 44px;
   font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
   font-size: 44px;
   line-height: 60px;
 }
 .hero__button {
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
   line-height: 30px;
   color: #FFFFFF;
   cursor: pointer;
@@ -134,32 +129,29 @@ li {
 }
 
 .advantages {
-  display: flex;
   gap: 30px;
-  justify-content: center;
   margin-top: 94px;
   margin-bottom: 94px;
 }
 .advantages__title {
-  font-family: "Roboto";
-  font-weight: 700;
+  color: #212121;
+  font-family: Roboto;
   font-size: 14px;
+  font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
 }
 .advantages__item {
   width: 270px;
 }
 .advantages__discription {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+  color: #757575;
+  font-family: Roboto;
   font-size: 14px;
+  font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #757575;
 }
 .advantages__icon {
   display: flex;
@@ -187,24 +179,20 @@ li {
 }
 
 .activities__title {
-  font-family: "Roboto";
-  font-weight: 700;
+  color: #212121;
+  font-family: Roboto;
   font-size: 36px;
-  line-height: 42px;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
   margin-bottom: 50px;
-}
-.activities__list {
-  justify-content: center;
-  display: flex;
 }
 .activities__description {
   color: #FFFFFF;
-  text-align: center;
+  font-family: Roboto;
   font-size: 14px;
   font-weight: 700;
+  text-align: center;
   letter-spacing: 0.42px;
   text-transform: uppercase;
   background: rgba(47, 48, 58, 0.8);
@@ -256,10 +244,11 @@ li {
 }
 .team__title {
   color: #212121;
-  text-align: center;
-  font-size: 36px;
   font-family: Roboto;
+  font-size: 36px;
   font-weight: 700;
+  color: #212121;
+  text-align: center;
   letter-spacing: 1.08px;
 }
 
@@ -287,12 +276,11 @@ li {
 }
 .card__job {
   color: #757575;
-  text-align: center;
   font-family: Roboto;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  color: #757575;
+  text-align: center;
   letter-spacing: 0.48px;
 }
 
@@ -342,9 +330,11 @@ li {
   padding-top: 12px;
 }
 .modal__title {
-  text-align: center;
+  color: #212121;
+  font-family: Roboto;
   font-size: 20px;
   font-weight: 700;
+  text-align: center;
   letter-spacing: 0.6px;
 }
 
@@ -426,6 +416,7 @@ li {
 
 .label {
   color: #757575;
+  font-family: Roboto;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.12px;
@@ -460,6 +451,7 @@ li {
 
 .accept {
   color: #757575;
+  font-family: Roboto;
   font-size: 14px;
   font-weight: 400;
   line-height: 24px; /* 171.429% */
@@ -484,29 +476,25 @@ li {
 }
 
 .footer {
-  background-color: #2f303a;
-  display: flex;
+  background-color: #2F303A;
   height: 252px;
   flex-direction: column;
   min-width: 1600px;
-  justify-content: center;
   padding-left: 10%;
 }
 .footer__link {
   color: #757575;
-  font-size: 14px;
   font-family: Roboto;
-  font-style: normal;
+  font-size: 14px;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.28px;
 }
 .footer__link.adress {
-  color: #fff;
+  color: #FFFFFF;
+  font-family: Roboto;
   font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.42px;
   font-weight: 400;
+  letter-spacing: 0.42px;
 }
 
 .footer__logo {

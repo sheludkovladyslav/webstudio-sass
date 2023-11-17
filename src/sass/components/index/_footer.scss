@@ -1,27 +1,18 @@
 .footer {
+  @extend %flexibility;
   background-color: $baseBackgroundColor;
-  display: flex;
   height: 252px;
   flex-direction: column;
   min-width: 1600px;
-  justify-content: center;
   padding-left: 10%;
 
   &__link {
-    color: $discriptionsColor;
-    font-size: 14px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    @include text($descriptionsColor, 14px, 500);
     letter-spacing: 0.28px;
   }
   &__link.adress {
-    color: $subBaseColorf;
-    font-size: 14px;
-    line-height: 24px;
+    @include text($subBaseColor, 14px, 400);
     letter-spacing: 0.42px;
-    font-weight: 400;
   }
 }
 

@@ -1,10 +1,9 @@
 .header__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 32px;
-  margin-left: 215px;
-  margin-right: 215px;
+  max-width: 1600px;
 }
 
 .nav__wrapper {
@@ -39,7 +38,7 @@
 }
 
 .nav__contact {
-  color: $discriptionsColor;
+  color: $descriptionsColor;
 }
 
 .contacts {

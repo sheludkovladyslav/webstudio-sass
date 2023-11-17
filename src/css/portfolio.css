@@ -21,7 +21,7 @@ li {
   list-style-type: none;
 }
 
-.main__projects, .main__selector {
+.footer, .main__projects, .main__selector {
   display: flex;
   justify-content: center;
 }
@@ -113,11 +113,10 @@ li {
 
 .header__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 32px;
-  margin-left: 215px;
-  margin-right: 215px;
+  max-width: 1600px;
 }
 
 .nav__wrapper {
@@ -125,11 +124,6 @@ li {
   gap: 90px;
 }
 
-.nav {
-  border-bottom: 1px solid #757575;
-  height: 80px;
-  padding-top: 1px;
-}
 .nav__buttons {
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -169,29 +163,25 @@ li {
 }
 
 .footer {
-  background-color: #2f303a;
-  display: flex;
+  background-color: #2F303A;
   height: 252px;
   flex-direction: column;
   min-width: 1600px;
-  justify-content: center;
   padding-left: 10%;
 }
 .footer__link {
   color: #757575;
-  font-size: 14px;
   font-family: Roboto;
-  font-style: normal;
+  font-size: 14px;
   font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.28px;
 }
 .footer__link.adress {
-  color: #fff;
+  color: #FFFFFF;
+  font-family: Roboto;
   font-size: 14px;
-  line-height: 24px;
-  letter-spacing: 0.42px;
   font-weight: 400;
+  letter-spacing: 0.42px;
 }
 
 .footer__logo {
